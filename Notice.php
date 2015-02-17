@@ -41,6 +41,7 @@ class Notice {
 
     /**
      * @param $message
+     * @param string $title
      */
     public function overlay($message, $title = 'Information')
     {
@@ -68,7 +69,7 @@ class Notice {
             $this->session->get($this->key.'.message'),
             $this->session->get($this->key.'.level'),
             $this->session->get($this->key.'.title'),
-            $this->session->get($this->get.'.overlay', false)
+            $this->session->get($this->key.'.overlay', false)
         );
     }
 

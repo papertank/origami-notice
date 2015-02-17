@@ -2,8 +2,13 @@
 
 class Flash {
 
-
-	public function __construct(
+    /**
+     * @param $message
+     * @param $level
+     * @param $title
+     * @param $overlay
+     */
+    public function __construct(
 		$message,
 		$level,
 		$title,

@@ -9,7 +9,7 @@ class NoticeServiceProvider extends ServiceProvider {
 	 *
 	 * @var bool
 	 */
-	protected $defer = true;
+	protected $defer = false;
 
 	/**
 	 * Bootstrap the application events.
@@ -17,7 +17,7 @@ class NoticeServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function boot()
-	{
+    {
 		$this->loadViewsFrom(__DIR__.'/views', 'notice');
 
 		$this->publishes([
@@ -36,7 +36,7 @@ class NoticeServiceProvider extends ServiceProvider {
         {
         	$session = $this->app->make('Illuminate\Session\Store');
 
-            return new Origami\Notice\Notice($session, 'flash_notice');
+            return new Notice($session, 'flash_notice');
         });
 	}
 
