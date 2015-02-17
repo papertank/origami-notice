@@ -65,6 +65,10 @@ class Notice {
     */
     public function flash()
     {
+        if ( ! $this->session->has($this->key.'.message') ) {
+            return false;
+        }
+
         return new Flash(
             $this->session->get($this->key.'.message'),
             $this->session->get($this->key.'.level'),
