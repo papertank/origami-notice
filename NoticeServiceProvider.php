@@ -21,7 +21,7 @@ class NoticeServiceProvider extends ServiceProvider {
 		$this->loadViewsFrom(__DIR__.'/views', 'notice');
 
 		$this->publishes([
-	        __DIR__.'/views' => base_path('resources/views/origami/notice'),
+	        __DIR__.'/views' => base_path('resources/views/vendor/notice'),
 	    ]);
 	}
 
