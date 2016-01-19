@@ -32,7 +32,7 @@ class NoticeServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-        $this->app->bindShared('notice', function()
+        $this->app->singleton('notice', function()
         {
         	$session = $this->app->make('Illuminate\Session\Store');
 
