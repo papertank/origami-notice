@@ -23,6 +23,11 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.3-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Origami\\Notice\\NoticeServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev"
