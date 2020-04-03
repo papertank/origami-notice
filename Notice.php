@@ -1,9 +1,11 @@
-<?php namespace Origami\Notice;
+<?php
+
+namespace Origami\Notice;
 
 use Illuminate\Session\Store;
 
-class Notice {
-
+class Notice
+{
     /**
      * @var \Illuminate\Session\Store
      */
@@ -17,7 +19,7 @@ class Notice {
     /**
      * @param Store $session
      */
-    function __construct(Store $session, $key)
+    public function __construct(Store $session, $key)
     {
         $this->session = $session;
         $this->key = $key;
@@ -46,8 +48,8 @@ class Notice {
     public function overlay($message, $title = 'Information')
     {
         $this->message($message);
-        $this->session->flash($this->key.'.title', $title);
-        $this->session->flash($this->key.'.overlay', true);
+        $this->session->flash($this->key . '.title', $title);
+        $this->session->flash($this->key . '.overlay', true);
     }
 
     /**
@@ -56,8 +58,8 @@ class Notice {
      */
     public function message($message, $level = 'info')
     {
-        $this->session->flash($this->key.'.message', $message);
-        $this->session->flash($this->key.'.level', $level);
+        $this->session->flash($this->key . '.message', $message);
+        $this->session->flash($this->key . '.level', $level);
     }
 
     /**
@@ -65,17 +67,15 @@ class Notice {
     */
     public function flash()
     {
-        if ( ! $this->session->has($this->key.'.message') ) {
+        if (!$this->session->has($this->key . '.message')) {
             return false;
         }
 
         return new Flash(
-            $this->session->get($this->key.'.message'),
-            $this->session->get($this->key.'.level'),
-            $this->session->get($this->key.'.title'),
-            $this->session->get($this->key.'.overlay', false)
+            $this->session->get($this->key . '.message'),
+            $this->session->get($this->key . '.level'),
+            $this->session->get($this->key . '.title'),
+            $this->session->get($this->key . '.overlay', false)
         );
     }
-
-
 }
