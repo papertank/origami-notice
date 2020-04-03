@@ -35,7 +35,7 @@ class NoticeServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('notice', function ($app) {
-            return new Notice($app['session'], 'flash_notice');
+            return new Notice('flash_notice');
         });
     }
 
