@@ -1,6 +1,6 @@
 {
     "name": "origami/notice",
-    "description": "Notice Laravel 6 package",
+    "description": "Notice Laravel package",
     "authors": [
         {
             "name": "Papertank",
@@ -9,8 +9,8 @@
     ],
     "require": {
         "php": "^7.2",
-        "illuminate/session": "^6.0|^7.0",
-        "illuminate/support": "^6.0|^7.0"
+        "illuminate/session": "^6.0|^7.0|^8.0",
+        "illuminate/support": "^6.0|^7.0|^8.0"
     },
     "autoload": {
         "psr-4": {
