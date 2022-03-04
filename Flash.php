@@ -1,4 +1,6 @@
-<?php namespace Origami\Notice;
+<?php 
+
+namespace Origami\Notice;
 
 class Flash {
 
