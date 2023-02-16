@@ -20,10 +20,10 @@ class NoticeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/views', 'notice');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'notice');
 
         $this->publishes([
-            __DIR__ . '/views' => base_path('resources/views/vendor/notice'),
+            __DIR__ . '/../resources/views' => base_path('resources/views/vendor/notice'),
         ]);
     }
 
@@ -34,7 +34,7 @@ class NoticeServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('notice', function ($app) {
+        $this->app->singleton('origami.notice', function ($app) {
             return new Notice('flash_notice');
         });
     }
@@ -46,6 +46,6 @@ class NoticeServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['notice'];
+        return ['origami.notice'];
     }
 }

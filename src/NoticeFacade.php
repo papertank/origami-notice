@@ -13,6 +13,6 @@ class NoticeFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'notice';
+        return 'origami.notice';
     }
 }

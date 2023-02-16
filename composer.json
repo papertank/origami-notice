@@ -1,6 +1,7 @@
 {
     "name": "origami/notice",
-    "description": "Notice Laravel package",
+    "description": "Flash notice package for Laravel projects",
+    "license": "MIT",
     "authors": [
         {
             "name": "Papertank",
@@ -9,15 +10,15 @@
     ],
     "require": {
         "php": "^7.2|^8.0.2",
-        "illuminate/session": "^6.0|^7.0|^8.0|^9.0",
-        "illuminate/support": "^6.0|^7.0|^8.0|^9.0"
+        "illuminate/session": "^6.0|^7.0|^8.0|^9.0|^10.0",
+        "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0"
     },
     "autoload": {
         "psr-4": {
-            "Origami\\Notice\\": ""
+            "Origami\\Notice\\": "src/"
         },
         "files": [
-            "helpers.php"
+            "src/helpers.php"
         ]
     },
     "extra": {
