@@ -23,7 +23,7 @@ class NoticeServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'notice');
 
         $this->publishes([
-            __DIR__ . '/../resources/views' => base_path('resources/views/vendor/notice'),
+            __DIR__ . '/../resources/views' => resource_path('views/vendor/notice'),
         ]);
     }
 
