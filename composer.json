@@ -4,8 +4,14 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Papertank",
-            "email": "david@papertank.co.uk"
+            "name": "Papertank Limited",
+            "homepage": "https://papertank.com",
+            "email": "hello@papertank.com"
+        },
+        {
+            "name": "David Rushton",
+            "email": "david@papertank.com",
+            "role": "Developer"
         }
     ],
     "require": {
