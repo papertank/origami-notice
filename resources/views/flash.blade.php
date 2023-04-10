@@ -1,4 +1,4 @@
-@if ( $flash = notice()->flash() )
+@if ( $flash = app('origami.notice')->flash() )
     @if ( $flash->isOverlay() )
         @include('notice::modal', ['class' => 'flash-modal', 'title' => $flash->getTitle(), 'body' => $flash->getMessage()])
     @else
